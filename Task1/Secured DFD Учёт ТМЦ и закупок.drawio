@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="yEdQymVMDBYPBcg4rWnS">
+    <mxGraphModel dx="2881" dy="1119" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-18" edge="1" parent="1" source="8QXPcp-8gIZLCFAPS7Ag-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="8QXPcp-8gIZLCFAPS7Ag-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-19" connectable="0" parent="8QXPcp-8gIZLCFAPS7Ag-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Данные о закупках&lt;br&gt;ТЦМ" vertex="1">
+          <mxGeometry relative="1" x="-0.2632" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Сотрудник склада" vertex="1">
+          <mxGeometry height="60" width="120" x="-100" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;DFD: Учёт ТМЦ и закупок&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="370" x="-20" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-20" edge="1" parent="1" source="8QXPcp-8gIZLCFAPS7Ag-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8QXPcp-8gIZLCFAPS7Ag-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-21" connectable="0" parent="8QXPcp-8gIZLCFAPS7Ag-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Данные для финансового учёта" vertex="1">
+          <mxGeometry relative="1" x="-0.1778" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="1C Торговля и склад" vertex="1">
+          <mxGeometry height="60" width="220" x="210" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-22" edge="1" parent="1" source="8QXPcp-8gIZLCFAPS7Ag-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8QXPcp-8gIZLCFAPS7Ag-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-23" connectable="0" parent="8QXPcp-8gIZLCFAPS7Ag-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Данные о закупках" vertex="1">
+          <mxGeometry relative="1" x="-0.1333" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="1C Бухгалтерия предприятия" vertex="1">
+          <mxGeometry height="60" width="220" x="210" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Excel-файл с данными о закупках" vertex="1">
+          <mxGeometry height="60" width="220" x="210" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="8QXPcp-8gIZLCFAPS7Ag-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#b46504;fillColor=#fad7ac;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Меры защиты:&lt;/font&gt;&lt;/b&gt;&lt;br&gt;- аутентификация через AD/LDAP&lt;br&gt;- шифрование данных&lt;br&gt;- аудит операций&lt;br&gt;- API интеграция вместо OLE" vertex="1">
+          <mxGeometry height="170" width="250" x="-120" y="410" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
