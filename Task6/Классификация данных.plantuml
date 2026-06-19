@@ -1,0 +1,71 @@
+@startuml
+!include <C4/C4_Container>
+
+title Healthcare Data Platform — Container Diagram
+
+Person(user, "Data Consumer", "Пользователь аналитических данных BI / ML / AI")
+
+System_Boundary(platform, "Healthcare Data Platform") {
+
+Container(crm, "CRM", "Source System", "Система управления клиентами: пациенты, обращения, история взаимодействий")
+Container(records, "Medical Records", "Clinical System", "Медицинские карты пациентов, диагнозы, назначения и клинические данные")
+Container(portal, "Patient Portal", "Web Application", "Портал пациента: введенные данные, запросы и результаты взаимодействия")
+Container(lab, "Laboratory", "Laboratory System", "Результаты анализов и диагностических исследований")
+Container(payment, "Payment Gateway", "Payment System", "Финансовые операции и платежные данные")
+
+Container(ingestion, "Data Ingestion Service", "Apache Airflow / Kafka Connect", "Сервис загрузки данных из внешних систем")
+
+Container(landing, "Landing Zone", "MinIO Object Storage", "Временная зона хранения исходных данных перед обработкой")
+
+Container(schema, "Schema Discovery Service", "OpenMetadata", "Автоматическое обнаружение структуры данных и технических метаданных")
+
+Container(classification, "Data Classification Engine", "Presidio / ML", "Определение чувствительных данных, PII/PHI и присвоение классификационных меток")
+
+Container(catalog, "Metadata Catalog", "OpenMetadata", "Каталог метаданных, владельцев данных и правил управления")
+
+Container(privacy, "Privacy Processing Layer", "Apache Spark", "Маскирование, анонимизация и подготовка данных")
+
+Container(datalake, "Secure Data Lake", "Data Lake Storage", "Защищенное хранилище данных")
+
+Container(raw, "Raw Zone", "Data Lake Zone", "Исходные данные без преобразований")
+Container(classified, "Classified Zone", "Data Lake Zone", "Данные с классификацией")
+Container(curated, "Curated Zone", "Data Lake Zone", "Очищенные наборы данных")
+
+Container(access, "Access Control Layer", "Keycloak + OPA", "Аутентификация, авторизация и политики доступа")
+
+Container(bi, "BI", "Analytics Platform", "Отчеты, дашборды")
+Container(ml, "ML", "Machine Learning Platform", "Обучение моделей")
+Container(ai, "AI", "AI Platform", "LLM и AI-сервисы")
+}
+
+
+Rel(crm, ingestion, "Передача данных")
+Rel(records, ingestion, "Передача данных")
+Rel(portal, ingestion, "Передача данных")
+Rel(lab, ingestion, "Передача данных")
+Rel(payment, ingestion, "Передача данных")
+
+Rel(ingestion, landing, "Загрузка исходных данных")
+
+Rel(landing, schema, "Извлечение структуры")
+Rel(schema, classification, "Метаданные")
+Rel(classification, catalog, "Классификация")
+
+Rel(catalog, privacy, "Правила обработки")
+Rel(privacy, datalake, "Обработанные данные")
+
+Rel(datalake, raw, "Содержит")
+Rel(datalake, classified, "Содержит")
+Rel(datalake, curated, "Содержит")
+
+Rel(datalake, access, "Контролируемый доступ")
+
+Rel(access, bi, "Данные")
+Rel(access, ml, "Данные")
+Rel(access, ai, "Данные")
+
+Rel(user, bi, "Использует")
+Rel(user, ml, "Использует")
+Rel(user, ai, "Использует")
+
+@enduml
